@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import data from './data.json'
+import {Link} from 'react-router-dom'
 
 function App() {
+  const [cats] = useState(data.cats)
+  localStorage.setItem('cats', JSON.stringify(cats))
+
   return (
+
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        <h1>Available cats:</h1>
+      {cats.map(cat => <div key={cat.id}>
+        <Link to={`/${cat.id}`} className="link">{cat.name}</Link>
+        </div>)}
+      </ul>
     </div>
   );
 }

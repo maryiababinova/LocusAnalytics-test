@@ -1,0 +1,32 @@
+{ "cats": [
+    {"id": 1,
+    "name": "Ksyuha",
+    "age": 12,
+    "disposition": "sweet to some",
+    "favoriteFood": "sour cream"
+    },
+    {"id": 2,
+    "name": "Simba",
+    "age": 11,
+    "disposition": "sweet, loves to eat",
+    "favoriteFood": "canned tuna"
+    },
+    {"id": 3,
+    "name": "Suki",
+    "age": 1,
+    "disposition": "judges humans",
+    "favoriteFood": "anything"
+    },
+    {"id": 4,
+    "name": "Lola",
+    "age": 10,
+    "disposition": "loves head pats",
+    "favoriteFood": "chicken"
+    },
+    {"id": 5,
+    "name": "Cody",
+    "age": 15,
+    "disposition": "not a cat",
+    "favoriteFood": "dog treats"
+    }
+]}
