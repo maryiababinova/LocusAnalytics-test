@@ -4,12 +4,14 @@ import data from './data.json'
 import {Link} from 'react-router-dom'
 
 function App() {
-  const [cats] = useState(data.cats)
+
+  const cats = !localStorage.cats ? data.cats : JSON.parse(localStorage.getItem('cats'))
+
   localStorage.setItem('cats', JSON.stringify(cats))
 
+  useState(cats)
+
   return (
-
-
     <div className="App">
       <ul>
         <h1>Available cats:</h1>

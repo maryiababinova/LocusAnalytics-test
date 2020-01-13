@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App'
 import Cat from './Cat'
-import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 const Routes = () => {
   return (
