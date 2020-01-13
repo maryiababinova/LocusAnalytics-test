@@ -9,9 +9,10 @@ const Cat = props => {
 
     let cats = localStorage.length > 0 ? JSON.parse(localStorage.getItem('cats')) : []
 
-    let [singleCat] = cats.filter(cat => cat.id === Number(props.match.params.id))
-
-    const [cat, setCat] = useState(singleCat)
+    const [cat, setCat] = useState(() => {
+        const [initialState] = cats.filter(cat => cat.id === Number(props.match.params.id))
+        return initialState
+    })
     const [customField, setCustomField] = useState('')
 
     const handleSubmit = evt => {

@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 import './App.css';
 import data from './data.json'
 import {Link} from 'react-router-dom'
+import BarChart from './BarChart'
+
 
 function App() {
 
@@ -19,6 +21,10 @@ function App() {
         <Link to={`/${cat.id}`} className="link">{cat.name}</Link>
         </div>)}
       </ul>
+      <div className='chart'>
+        <h3>Ages of the Cats</h3>
+        <BarChart />
+      </div>
     </div>
   );
 }
